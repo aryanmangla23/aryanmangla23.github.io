@@ -89,10 +89,8 @@ Indented code
 
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy").
-
 ## Images
 
-![The San Juan Mountains are beautiful!]([/assets/images/san-juan-mountains.jpg](https://www.google.com/imgres?imgurl=https%3A%2F%2Fbrushesnvino.com%2Fwp-content%2Fuploads%2FDreamy-Sunset.jpg&imgrefurl=https%3A%2F%2Fbrushesnvino.com%2Fevents%2Fthankful-thursday-dreamy-sunset%2F&tbnid=OO0IWjZX3dzaPM&vet=12ahUKEwjfjdaYnqL5AhVswikDHcq4ClYQMygZegUIARD6AQ..i&docid=kduBP3JbfOUfWM&w=792&h=612&q=susnet%20image%20small%20link&ved=2ahUKEwjfjdaYnqL5AhVswikDHcq4ClYQMygZegUIARD6AQ))
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ## The End!
