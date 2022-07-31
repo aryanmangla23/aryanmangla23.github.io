@@ -84,6 +84,6 @@ My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best sea
 
 ## Images
 
-![The San Juan Mountains are beautiful!]([/assets/images/san-juan-mountains.jpg "San Juan Mountains"](https://www.google.com/imgres?imgurl=https%3A%2F%2Fimage.shutterstock.com%2Fimage-photo%2Fbeautiful-sunset-tropical-beach-palm-260nw-1716193708.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fsunset&tbnid=sHySX0eRzH2ozM&vet=12ahUKEwjQ9patm6L5AhWz8lMKHe3zBfYQMygEegUIARDkAQ..i&docid=8XzjPD7kk9W-cM&w=390&h=280&q=sunset%20images&ved=2ahUKEwjQ9patm6L5AhWz8lMKHe3zBfYQMygEegUIARDkAQ))
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
 
 ## The End!
