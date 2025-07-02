@@ -1,10 +1,226 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Aryan Mangla">
+  <title>Projects - Aryan Mangla</title>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #336699;
+    }
+
+    .navbar a {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .banner {
+      background-color: #336699;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .news-section h2, .publications-section h2, .contact-section h2 {
+      margin-top: 40px;
+    }
+
+    .news-date {
+      background-color: #90ee90; /* Lighter green bubble */
+      color: black; /* Change font color to black */
+      font-weight: bold;
+      border-radius: 15px; /* Oval shape */
+      padding: 5px 15px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 10px;
+      width: 120px; /* Fixed width for consistency */
+      font-size: 0.85em; /* Decrease font size slightly */
+    }
+
+    .news-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .news-item p {
+      margin: 0; /* Remove margin for better alignment */
+    }
+
+    .publication-title {
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .abstract {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .publication-img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 20px;
+      flex-shrink: 0; /* Prevent shrinking */
+    }
+
+    .d-flex {
+      align-items: flex-start; /* Ensure alignment when text expands */
+    }
+
+    @media (max-width: 768px) {
+      .publication-img {
+        max-width: 100%; /* Adjust for smaller screens */
+        margin-bottom: 15px;
+      }
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    .projects-in-progress {
+      margin-top: 100px; /* Move the section lower on the page */
+    }
+
+    .projects-in-progress ul {
+      list-style-type: disc; /* Use disc bullets for this specific list */
+      padding-left: 20px; /* Add indentation for better readability */
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Aryan Mangla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Projects</h1>
+  </div>
+
+  <!-- Projects Section -->
+  <section class="mt-5">
+    <div class="content">
+      <ul>
+        <li class="d-flex mb-4">
+          <img src="images/catdog.jpeg" alt="Cat-Dog CNN" class="publication-img">
+          <div>
+            <div class="publication-title">Cat vs Dog Image Classification with CNN</div>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract1')">Abstract</button>
+            <a href="https://github.com/aryanmangla23/Dogs_Cats_Classifier/tree/main" class="btn btn-sm btn-outline-secondary" target="_blank">Read More</a>
+            <div id="abstract1" class="abstract">
+              This project used a convolutional neural network (CNN) to classify images of cats and dogs, focusing on improving performance through data augmentation, batch normalization, and dropout. Training accuracy improved steadily, while validation metrics revealed signs of overfitting after several epochs. By analyzing performance curves and refining the model, we gained hands-on experience with CNN development, optimization, and evaluation in deep learning.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <ul>
+        <li class="d-flex mb-4">
+          <img src="images/IGT.jpg" alt="IGT" class="publication-img">
+          <div>
+            <div class="publication-title">Behavioral Analysis of the Iowa Gambling Task (IGT)</div>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract2')">Abstract</button>
+            <a href="https://github.com/aryanmangla23/IGT" class="btn btn-sm btn-outline-secondary" target="_blank">Read More</a>
+            <div id="abstract2" class="abstract">
+              This project analyzes behavior in the 100-trial Iowa Gambling Task (IGT) using open-source data to examine how decision-making evolves over time. Participants choose among four decks with varying reward-loss profiles, simulating real-life risk-based choices. We tracked shifts in deck preference, computed net scores across trial blocks, and visualized learning trends. Results show increasing selection of advantageous decks (C and D) and rising net scores, indicating adaptive behavior. Summary statistics confirmed the expected reward-loss asymmetries across decks. This analysis highlights how behavioral data can reveal learning and strategy shifts in decision-making under uncertainty.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <ul>
+        <li class="d-flex mb-4">
+          <img src="images/MEG.jpg" alt="MEG" class="publication-img">
+          <div>
+            <div class="publication-title">MEG Hand Movement Classification using CSP</div>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract3')">Abstract</button>
+            <a href="https://github.com/aryanmangla23/MEG-BCI-CIV-D3/tree/main" class="btn btn-sm btn-outline-secondary" target="_blank">Read More</a>
+            <div id="abstract3" class="abstract">
+              This project applies machine learning to classify hand movement directions from MEG data using Common Spatial Patterns (CSP) and wavelet-based time-frequency analysis. Using BCI Competition IV Dataset 3 (Subject S1), we built a pipeline with preprocessing (bandpass filtering, ICA artifact removal), CSP feature extraction, and SVM classification. ICA significantly boosted classification accuracy—from 52% to 88%—by reducing non-brain artifacts. Additional analysis of ERPs, spectral power, and CSP topomaps revealed spatiotemporal brain dynamics distinguishing movement classes. Wavelet-based features alone achieved high accuracy (82.5%), showing their utility in decoding motor intentions from MEG signals.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <ul>
+        <li class="d-flex mb-4">
+          <img src="images/haxby.jpeg" alt="Cat-Dog CNN" class="publication-img">
+          <div>
+            <div class="publication-title">fMRI Decoding with the Haxby Dataset</div>
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract4')">Abstract</button>
+            <a href="https://github.com/aryanmangla23/HAXBI-FMRI" class="btn btn-sm btn-outline-secondary" target="_blank">Read More</a>
+            <div id="abstract4" class="abstract">
+              This project applied multivariate pattern analysis (MVPA) and machine learning to fMRI data from the Haxby 2001 dataset to decode visual categories from brain activity. Using Python tools like Nilearn and Scikit-learn, we implemented a full pipeline including preprocessing, ROI-based decoding, searchlight analysis, representational similarity analysis (RSA), and multi-class classification. Binary classification of faces vs. houses achieved >95% accuracy, with peak decoding localized to the fusiform and parahippocampal regions. RSA confirmed category-specific neural patterns, and multi-class decoding further demonstrated robust classification across all eight categories. Even after removing top voxels, performance remained above chance, highlighting the distributed nature of visual representations in the brain.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Aryan Mangla. Last updated: July 2025.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleAbstract(id) {
+      var abstract = document.getElementById(id);
+      abstract.style.display = (abstract.style.display === "block") ? "none" : "block";
+    }
+
+  </script>
 </body>
 </html>
