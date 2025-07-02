@@ -1,10 +1,166 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Aryan Mangla">
+  <title>Research - Aryan Mangla</title>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #336699;
+    }
+
+    .navbar a {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .banner {
+      background-color: #336699;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .work-section h2 {
+      margin-top: 40px;
+    }
+
+    .work-title {
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .abstract {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .work-img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 20px;
+      flex-shrink: 0; /* Prevent shrinking */
+    }
+
+    @media (max-width: 768px) {
+      .work-img {
+        max-width: 100%; /* Adjust for smaller screens */
+        margin-bottom: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Aryan Mangla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Research</h1>
+  </div>
+
+  <!-- Work Section -->
+  <section class="work-section container">
+    <h2>Work</h2>
+    <ul class="list-unstyled">
+
+      <li class="d-flex mb-4">
+        <img src="images/RSOS.png" alt="Work" class="work-img">
+        <div>
+          <div class="work-title">Description-Experience Gap Analysis: Uncertainty and Context Effects</div>
+          <div><em>Aryan Mangla</em>, Thomas Elston</div>
+          <div>2025</div>
+          <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract1')">Abstract</button>
+          <a href="https://github.com/aryanmangla23/ProbPerceptionMini/tree/main" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+          <div id="abstract1" class="abstract">
+            This project investigates the description-experience (DE) gap in decision-making under uncertainty, analyzing how choices based on described probabilities differ from those based on experienced probabilities. Utilizing participant choice behavior data from a study by Thomas Elston (2021), this research aims to determine the influence of outcome uncertainty and gain/loss contexts on decision-making. The project involves downloading, extracting, and processing 60 individual Excel files, filtering for "DescriptionExperience" stimuli and equiprobable conditions. It then computes mean choice probabilities and reaction times across various experimental conditions (e.g., pure description, pure experience, mixed trials) for both gain and loss scenarios, preparing the data for further statistical analysis to uncover systematic biases in judgment and choice.
+          </div>
+        </div>
+      </li>
+
+      <li class="d-flex mb-4">
+        <img src="images/Mayfield.png" alt="Work" class="work-img">
+        <div>
+          <div class="work-title">The Role of SlC1A3 in Alcohol Use Disorder and Alcohol-Associated Behaviors</div>
+          <div><em>Aryan Mangla</em>, R. Barchiesi, N. A. Salem, A. Mangal, A. Warden, W. Chen, E. Ostendorff-Kahanek, R. D. Mayfield</div>
+          <div>2024</div>
+          <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract2')">Abstract</button>
+          <a href="https://github.com/aryanmangla23/GLAST2023-2024" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+          <div id="abstract2" class="abstract">
+            This study investigated the role of the glutamate transporter SLC1A3 (GLAST) in alcohol-associated behaviors, building on prior research indicating its dysregulation following alcohol consumption in humans and mice, often more prominently than SLC1A2 (GLT-1). An AAV5 viral vector was designed to specifically knock down (KD) Slc1a3 in the dorsomedial prefrontal cortex (dmPFC) of male C57BL/6J mice without affecting Slc1a2 expression. While the KD of Slc1a3 did not significantly alter voluntary alcohol intake or preference in a two-bottle choice model, even with quinine adulteration, it consistently showed an anxiolytic effect. This anxiolytic effect was more pronounced in animals with a history of alcohol exposure. The findings suggest that while SLC1A3 alone may not regulate alcohol consumption, it plays a role in anxiety-like behaviors associated with alcohol, particularly within the context of prior alcohol exposure. Future research may need to explore the coordinated manipulation of multiple genes within astrocyte-specific networks, as SLC1A3 is a central component of such modules implicated in alcohol dependence.
+          </div>
+        </div>
+      </li>
+
+      <li class="d-flex mb-4">
+        <img src="images/Biobricks.png" alt="Work" class="work-img">
+        <div>
+          <div class="work-title">Investigating the Impact of Cancer-Associated PARP1 Mutations on Enzyme Function</div>
+          <div><em>Aryan Mangla</em>, Soo-Hyun Yang</div>
+          <div>2024</div>
+          <button class="btn btn-sm btn-outline-secondary" onclick="toggleAbstract('abstract3')">Abstract</button>
+          <a href="https://github.com/aryanmangla23/BioBricks" class="btn btn-sm btn-outline-primary" target="_blank">Read More</a>
+          <div id="abstract3" class="abstract">
+            This study aimed to investigate the functional impact of cancer-associated PARP1 mutations, specifically the D229V mutation, on its enzymatic activity and PARylation function. The research successfully introduced the D229V mutation into three different PARP1 expression vectors (pBB204, pBB205, and pBB206) using site-directed mutagenesis, confirmed by agarose gel electrophoresis and DNA sequencing. The successful transformation and expression of the mutant construct in E. coli BL21(DE3) cells further validated the experimental workflow. While this study established a robust molecular biology framework for generating and expressing PARP1 mutants, future research will focus on in vitro PARylation assays to directly assess the impact of these mutations on enzymatic activity and their potential contributions to cellular dysfunction and oncogenesis.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Aryan Mangla. Last updated: July 2025.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleAbstract(id) {
+      var abstract = document.getElementById(id);
+      abstract.style.display = (abstract.style.display === "block") ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
