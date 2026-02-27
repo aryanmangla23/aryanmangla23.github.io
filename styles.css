@@ -1,0 +1,293 @@
+/* ═══════════════════════════════════════════════
+   styles.css  —  Aryan Mangla personal site
+   ═══════════════════════════════════════════════ */
+
+/* ── RESET & TOKENS ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #040810;
+  --fg:      #e2eaf5;
+  --fg2:     #8896aa;
+  --accent:  #22c55e;
+  --accent2: #3b82f6;
+  --accent3: #a78bfa;
+  --border:  rgba(255, 255, 255, 0.06);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Syne', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── CURSOR GLOW ── */
+#cursorGlow {
+  position: fixed;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.09), transparent 65%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* ── LAYOUT ── */
+.container {
+  display: flex;
+  max-width: 1120px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── LEFT PANEL ── */
+.left {
+  width: 300px;
+  min-width: 300px;
+  padding: 64px 32px 64px 40px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  filter: grayscale(20%);
+}
+
+.avatar-ph {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #1a2744, #0d1f3c);
+  border: 1px solid var(--border);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  color: var(--fg2);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.tagline .hl { color: var(--accent); }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 40px;
+}
+
+.links a {
+  color: var(--fg2);
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.links a:hover {
+  color: var(--fg);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.status {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--fg2);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,  100% { opacity: 1; box-shadow: 0 0 0 0   rgba(34, 197, 94, 0.4); }
+  50%        { opacity: 0.7; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0); }
+}
+
+/* ── RIGHT PANEL ── */
+.right {
+  flex: 1;
+  padding: 64px 48px 120px 56px;
+  min-width: 0;
+}
+
+/* ── RASTER HEADER & CONTROLS ── */
+.raster-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.raster-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--fg2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.raster-controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.raster-controls button {
+  background: transparent;
+  color: var(--fg2);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.raster-controls button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.raster-controls button.on {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(34, 197, 94, 0.07);
+}
+
+/* ── RASTER CANVAS ── */
+#rasterCanvas {
+  width: 100%;
+  display: block;
+  cursor: crosshair;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+/* ── CONTENT TYPOGRAPHY ── */
+h2 {
+  margin-top: 52px;
+  font-size: 11px;
+  color: var(--fg2);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+p {
+  color: var(--fg2);
+  font-size: 15px;
+  margin-bottom: 16px;
+  font-weight: 300;
+  padding: 2px 0;
+}
+
+p strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 12px;
+  color: var(--fg2);
+  font-size: 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 300;
+  padding-bottom: 2px;
+}
+
+li::before {
+  content: '→';
+  color: var(--accent);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ── SCROLL FADE ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+
+  .left {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 40px 24px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .right { padding: 32px 24px 80px; }
+
+  #rasterCanvas { height: 260px; }
+}
